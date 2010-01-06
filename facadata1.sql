@@ -42,17 +42,17 @@ CREATE TABLE ACRs03_08
 	AccessOnlineGSAFACAWebSite			varchar(200), 
 	AccessPublications			varchar(200), 
 	AccessOther			varchar(6), 
-	SupportComment			Postgres_Unknown 0x0c, 
-	OutcomeComment			Postgres_Unknown 0x0c, 
-	CostSavingsComment			Postgres_Unknown 0x0c, 
-	NumberOfRecommendationsComment			Postgres_Unknown 0x0c, 
-	PctOfRecommendationsFullyComment			Postgres_Unknown 0x0c, 
-	PctOfRecommendationsPartComment			Postgres_Unknown 0x0c, 
-	NoAgencyFeedbackComment			Postgres_Unknown 0x0c, 
-	YesAgencyFeedbackComment			Postgres_Unknown 0x0c, 
-	ActionComment			Postgres_Unknown 0x0c, 
-	GrantsReviewComment			Postgres_Unknown 0x0c, 
-	AccessComment			Postgres_Unknown 0x0c
+	SupportComment			longtext, 
+	OutcomeComment			longtext, 
+	CostSavingsComment			longtext, 
+	NumberOfRecommendationsComment			longtext, 
+	PctOfRecommendationsFullyComment			longtext, 
+	PctOfRecommendationsPartComment			longtext, 
+	NoAgencyFeedbackComment			longtext, 
+	YesAgencyFeedbackComment			longtext, 
+	ActionComment			longtext, 
+	GrantsReviewComment			longtext, 
+	AccessComment			longtext
 );
 #_ CREATE ANY INDEXES ...
 
@@ -185,7 +185,7 @@ CREATE TABLE GeneralInformation97_08
 	Presidential			varchar(6), 
 	CommitteeFunction			varchar(100), 
 	CommitteeStatus			varchar(20), 
-	CommitteeURL			Postgres_Unknown 0x0c, 
+	CommitteeURL			longtext, 
 	ExemptRenew			varchar(6), 
 	PresidentialAppointments			varchar(6), 
 	MaxNumberofMembers			varchar(20)
@@ -226,11 +226,11 @@ CREATE TABLE Justifications97_08
 	CID			int, 
 	Cno			int, 
 	FY			varchar(8), 
-	AccomplishesPurpose			Postgres_Unknown 0x0c, 
-	BalancedMembership			Postgres_Unknown 0x0c, 
-	FrequencyRelevance			Postgres_Unknown 0x0c, 
-	WhyThisCommittee			Postgres_Unknown 0x0c, 
-	WhyCloseMeetings			Postgres_Unknown 0x0c
+	AccomplishesPurpose			longtext, 
+	BalancedMembership			longtext, 
+	FrequencyRelevance			longtext, 
+	WhyThisCommittee			longtext, 
+	WhyCloseMeetings			longtext
 );
 #_ CREATE ANY INDEXES ...
 
@@ -275,7 +275,7 @@ CREATE TABLE Reports97_08
 	FY			varchar(8), 
 	ReportTitle			varchar(510), 
 	ReportDate			Timestamp, 
-	ReportLink			Postgres_Unknown 0x0c, 
+	ReportLink			longtext, 
 	IsPresidentialActionRequired			varchar(100)
 );
 #_ CREATE ANY INDEXES ...
@@ -351,11 +351,11 @@ CREATE TABLE SubCommitteesMeetings98_08
 	CID			int, 
 	CNo			int, 
 	FY			varchar(8), 
-	Purpose			Postgres_Unknown 0x0c, 
+	Purpose			longtext, 
 	MeetingStartDate			Timestamp, 
 	MeetingStopDate			Timestamp, 
 	MeetingType			varchar(32), 
-	MinutesLink			Postgres_Unknown 0x0c, 
+	MinutesLink			longtext, 
 	Location			varchar(510)
 );
 #_ CREATE ANY INDEXES ...
@@ -392,7 +392,7 @@ CREATE TABLE SubCommitteesReports98_08
 	FY			varchar(8), 
 	ReportTitle			varchar(510), 
 	ReportDate			Timestamp, 
-	ReportLink			Postgres_Unknown 0x0c, 
+	ReportLink			longtext, 
 	IsPresidentialActionRequired			varchar(100)
 );
 #_ CREATE ANY INDEXES ...
@@ -413,11 +413,11 @@ CREATE TABLE Meetings97_08
 	CID			int, 
 	CNo			int, 
 	FY			varchar(8), 
-	Purpose			Postgres_Unknown 0x0c, 
+	Purpose			longtext, 
 	MeetingStartDate			Timestamp, 
 	MeetingStopDate			Timestamp, 
 	MeetingType			varchar(32), 
-	MinutesLink			Postgres_Unknown 0x0c, 
+	MinutesLink			longtext, 
 	Location			varchar(510)
 );
 #_ CREATE ANY INDEXES ...
@@ -431,7 +431,7 @@ CREATE TABLE Recommendations97_08
 	Recommendation			varchar(30), 
 	LegislationRequired			varchar(6), 
 	LegislationStatus			varchar(16), 
-	Remarks			Postgres_Unknown 0x0c
+	Remarks			longtext
 );
 #_ CREATE ANY INDEXES ...
 
