@@ -1,0 +1,3 @@
+Initial attempt to extract FACAData-All-1997-2008.mdb
+using this as my starting point: http://blog.moybella.net/2007/03/10/converting-microsoft-access-mdb-into-csv-or-mysql-in-linux/
+to extract the data...
